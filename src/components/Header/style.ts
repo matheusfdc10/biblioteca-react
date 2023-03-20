@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 
 export const HeaderStyled = styled.header`
+    position: fixed;
+    top: 0;
     background-color: #FFFFFF;
     width: 100%;
     height: 70px;

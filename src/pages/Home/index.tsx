@@ -1,9 +1,16 @@
+import Shelf from "../../components/Shelf";
+
+const themes = ['Aventura', 'Ação', 'Destaque', 'Infantil']
 
 const Home = () => {
+
+
     return(
-        <div>
-            <h1>Home</h1>
-        </div>
+        <>
+            {themes.map(item => (
+                <Shelf key={item} theme={item}/>
+            ))}
+        </>
     )
 }
 
