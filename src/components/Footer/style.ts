@@ -9,20 +9,32 @@ export const FooterStyled = styled.footer`
     background-color: #FFFFFF;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     gap: 72px;
     padding: 0 81px;
+
+    @media (max-width: 743px) {
+        padding: 0 20px;
+    }
 
     > span {
         font-size: 12.8px;
         font-weight: 500;
         color: #B2B4B9;
+
+        @media (max-width: 743px) {
+            text-align: center;
+        }
     }
 
     > div {
         display: flex;
         gap: 12px;
+
+        @media (max-width: 743px) {
+            display: none;
+        }
 
         > button {
             flex-shrink: 0;

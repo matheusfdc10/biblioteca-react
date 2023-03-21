@@ -20,8 +20,6 @@ const SearchResult = () => {
     const {search} = useParams()
     const [books, setBooks] = useState<booksProps>([])
 
-    console.log(books)
-
     useEffect(() => {
         axios.get(`https://www.googleapis.com/books/v1/volumes?q=${search}&startIndex=0&maxResults=40`)
             .then(response => response.data)
@@ -39,12 +37,6 @@ const SearchResult = () => {
                 <Filter />
                 <BookList books={books} theme={search!}/>
             </div>
-
-            {/* <h1>SearchResult</h1>
-            <h1>{search}</h1>
-            {books.map(book => (
-                <h1>{book.volumeInfo.title}</h1>
-            ))} */}
         </SearchResultStyled>
     )
 }

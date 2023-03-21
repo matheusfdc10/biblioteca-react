@@ -6,9 +6,14 @@ export const BookShelfStyled = styled.div`
     padding-top: 36px;
     padding-bottom: 47px;
 
+    @media (max-width: 744px) {
+        padding-top: 18px;
+        padding-bottom: 23px;
+    }
+
     > div {
         margin: 0 10%;
-        @media (max-width: 744px) {
+        @media (max-width: 743px) {
             margin: 0;
         }
 
@@ -55,12 +60,22 @@ export const BookShelfStyled = styled.div`
                 border-radius: 10px 20px 20px 10px;
                 background-color: #E8FFFC;
 
+                @media (max-width: 744px) {
+                    height: 185px;
+                    width: 124px;
+                }
+
                 > img { 
                     height: 296px;
                     width: 198px;
                     box-shadow: 0px 8px 10px 1px rgba(5, 59, 75, 0.06);
                     border-radius: 6px 12px 12px;
                     background-color: #E8FFFC;
+
+                    @media (max-width: 744px) {
+                        height: 185px;
+                        width: 124px;
+                    }
                 }
 
                 > div { 
@@ -73,6 +88,11 @@ export const BookShelfStyled = styled.div`
                     flex-direction: column;
                     justify-content: end;
                     padding-bottom: 27px;
+
+                    @media (max-width: 744px) {
+                        height: 185px;
+                        width: 124px;
+                    }
                     
                     > span {
                         text-align: center;

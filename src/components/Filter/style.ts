@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const FilterStyled = styled.div`
+
+    @media (max-width: 644px) {
+        display: none;
+    }
     
     > p {
         font-size: 18px;

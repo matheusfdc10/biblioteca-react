@@ -14,42 +14,55 @@ export const HeaderStyled = styled.header`
     align-items: center;
     gap: 57px;
 
+    @media (max-width: 743px) {
+        box-shadow: none;
+        border-bottom: 1px solid #F1F7FC;
+    }
+
     > img {
         width: 140px;
         height: 30px;
         cursor: pointer;
     }
 
-    > .search-input {
-        flex: 1;
-        height: 35px;
-        background: #F1F7FC;
-        border: 1px solid #DEE1E6;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-
-        > input {
-            flex: 1;
-            border: 0;
-            outline: 0;
-            background-color: transparent;
-            margin-left: 10px;
-        }
-
-        > svg {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-            margin-top: 4px;
+    > .SearchInput {
+        @media (max-width: 743px) {
+            display: none;
         }
     }
+
 
     > .box {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
+
+        > div {
+            cursor: pointer;
+            @media (min-width: 745px) {
+                display: none;
+            }
+
+            > .active {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: red;
+                margin-left: 15px;
+                margin-bottom: -9px;
+            }
+
+            > svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        /* @media (max-width: 744px) {
+            flex-direction: row-reverse;
+        } */
+        
 
         > img {
             width: 32px;
@@ -69,10 +82,22 @@ export const HeaderStyled = styled.header`
             align-items: center;
             gap: 4px;
 
+            @media (max-width: 744px) {
+                display: none;
+            }
+
             > svg {
                 height: 24px;
                 width: 24px;
             }
         }
+    }
+`
+
+export const InputMobile = styled.div`
+    padding: 20px;
+
+    @media (min-width: 744px) {
+        display: none;
     }
 `

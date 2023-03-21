@@ -18,16 +18,25 @@ export const BookListStyled = styled.div`
             max-width: 124px;
             cursor: pointer;
 
+            @media (max-width: 644px) {
+                max-width: 100px;
+            }
+
             > img {
                 height: 185px;
-                width: 124px;
+                max-width: 124px;
                 box-shadow: 0px 8px 10px 1px rgba(5, 59, 75, 0.06);
-                border-radius: 6px 12px 12px
+                border-radius: 6px 12px 12px;
+
+                @media (max-width: 644px) {
+                    max-width: 100px;
+                    height: calc(185px - 24px);
+                }
             }
 
             > div { 
                 height: 185px;
-                width: 124px;
+                max-width: 124px;
                 box-shadow: 0px 8px 10px 1px rgba(5, 59, 75, 0.06);
                 border-radius: 6px 12px 12px;
                 background-color: #E8FFFC;
@@ -35,6 +44,11 @@ export const BookListStyled = styled.div`
                 flex-direction: column;
                 justify-content: center;
                 margin-bottom: 8px;
+
+                @media (max-width: 644px) {
+                    max-width: 100px;
+                    height: calc(185px - 24px);
+                }
                 
                 > span {
                     text-align: center;
