@@ -54,7 +54,8 @@ export const BookShelfStyled = styled.div`
                 }
             }
 
-            >   div {
+            >   a {
+                text-decoration: none;
                 height: 296px;
                 width: 198px;
                 border-radius: 10px 20px 20px 10px;
@@ -99,6 +100,7 @@ export const BookShelfStyled = styled.div`
                         bottom: 0;
                         font-size: 16px;
                         font-weight: 600;
+                        color: black;
                     }
                 }
             }

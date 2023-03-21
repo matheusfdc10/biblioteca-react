@@ -14,14 +14,15 @@ export const BookListStyled = styled.div`
         flex-wrap: wrap;
         gap: 28px;
 
-        > div {
+        > a {
             max-width: 124px;
             width: 100%;
-            cursor: pointer;
+            text-decoration: none;
+            /* cursor: pointer; */
 
-            /* @media (max-width: 644px) {
+            @media (max-width: 644px) {
                 width: 100px;
-            } */
+            }
 
             > img {
                 height: 185px;
@@ -30,10 +31,10 @@ export const BookListStyled = styled.div`
                 box-shadow: 0px 8px 10px 1px rgba(5, 59, 75, 0.06);
                 border-radius: 6px 12px 12px;
 
-                /* @media (max-width: 644px) {
+                @media (max-width: 644px) {
                     max-width: 100px;
                     height: calc(185px - 24px);
-                } */
+                }
             }
 
             > div { 
@@ -48,10 +49,10 @@ export const BookListStyled = styled.div`
                 justify-content: center;
                 margin-bottom: 8px;
 
-                /* @media (max-width: 644px) {
+                @media (max-width: 644px) {
                     max-width: 100px;
                     height: calc(185px - 24px);
-                } */
+                }
                 
                 > span {
                     text-align: center;
@@ -67,6 +68,7 @@ export const BookListStyled = styled.div`
                 line-height: 100%;
                 word-break: normal;
                 margin-top: 4px;
+                color: black;
             }
 
             > .publisher {

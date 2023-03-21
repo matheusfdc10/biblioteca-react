@@ -11,6 +11,7 @@ type booksProps = {
     volumeInfo: {
         title: string,
         publisher: string,
+        previewLink: string,
         imageLinks: {
             thumbnail: string
         }
@@ -21,7 +22,7 @@ const BookList = ({ search, children}: BookListProps) => {
     const [books, setBooks] = useState<booksProps>([])
     const [startIndex, setStartIndex] = useState(0)
     const divInfiniteScrollRef = useRef<HTMLDivElement>(null)
-
+    console.log(books)
     useEffect(() => {
         setBooks((old) => old = [])
         setStartIndex((index) => index = 0)
@@ -62,13 +63,12 @@ const BookList = ({ search, children}: BookListProps) => {
     }, [books.length, divInfiniteScrollRef])
     
     return (
-        <>
         <BookListStyled>
             <p>Resultados para "{search}":</p>
             {children}
             <div className="container">
                 {books.map((book,i) => (
-                    <div key={i} title={book.volumeInfo.title}>
+                    <a key={i} title={book.volumeInfo.title} href={book.volumeInfo.previewLink} target="_blank">
                         {book.volumeInfo.imageLinks?.thumbnail ?
                             <img  
                                 src={book.volumeInfo.imageLinks?.thumbnail} 
@@ -79,15 +79,13 @@ const BookList = ({ search, children}: BookListProps) => {
                                 <span>Sem Capa</span>
                             </div>
                         }
-                        {/* <img src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} /> */}
                         <p className="title">{book.volumeInfo.title}</p>
                         <p className="publisher">{book.volumeInfo?.publisher}</p>
-                    </div>
+                    </a>
                 ))}
             </div>
-        <div ref={divInfiniteScrollRef}/>
+            <div ref={divInfiniteScrollRef}/>
         </BookListStyled>
-        </>
     )
 }
 

@@ -6,6 +6,7 @@ import axios from 'axios'
 type booksProps = {
     volumeInfo: {
         title: string,
+        previewLink: string,
         imageLinks: {
             thumbnail: string 
         }
@@ -36,7 +37,7 @@ const BookShelf = ({theme}:ThemeProps) => {
                 <h1 style={theme === 'Destaques' ? {color: '#A977D8', fontSize: '22px'} : {}}>{theme}</h1>
                 <div>
                     {books.map((item) => (
-                        <div key={item.volumeInfo.title} title={item.volumeInfo.title}>
+                        <a key={item.volumeInfo.title} title={item.volumeInfo.title} href={item.volumeInfo.previewLink} target="_blank">
                             {item.volumeInfo.imageLinks?.thumbnail ?
                                 <img  
                                     src={item.volumeInfo.imageLinks?.thumbnail} 
@@ -47,7 +48,7 @@ const BookShelf = ({theme}:ThemeProps) => {
                                     <span>Sem Capa</span>
                                 </div>
                             }
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>
