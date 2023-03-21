@@ -28,7 +28,7 @@ const BookList = ({ search, children}: BookListProps) => {
 
         window.scrollTo({
             top: 0,
-            behavior: "auto"
+            behavior: "auto",
         })
     }, [search])
 
@@ -60,10 +60,6 @@ const BookList = ({ search, children}: BookListProps) => {
             intersectionObserver.disconnect();
         }
     }, [books.length, divInfiniteScrollRef])
-
-    if(!books.length){
-        return null
-    }
     
     return (
         <>
