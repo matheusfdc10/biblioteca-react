@@ -1,6 +1,6 @@
-import Shelf from "../../components/Shelf";
+import BookShelf from "../../components/BookShelf";
 
-const themes = ['Aventura', 'Ação', 'Destaque', 'Infantil']
+const themes = ['Aventura', 'Ação', 'Destaques', 'Infantil']
 
 const Home = () => {
 
@@ -8,7 +8,7 @@ const Home = () => {
     return(
         <>
             {themes.map(item => (
-                <Shelf key={item} theme={item}/>
+                <BookShelf key={item} theme={item}/>
             ))}
         </>
     )

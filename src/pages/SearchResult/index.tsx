@@ -1,10 +1,17 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import BookList from "../../components/BookList";
+import Filter from "../../components/Filter";
+import { SearchResultStyled } from "./style";
 
 type booksProps = {
     volumeInfo: {
-        title: string
+        title: string,
+        publisher: string,
+        imageLinks: {
+            thumbnail: string
+        }
     }
 }[];
 
@@ -22,14 +29,23 @@ const SearchResult = () => {
             .catch(() => alert(`Erro ao buscar por ${search}, tente novamente`))
     }, [search])
 
+    if(!books.length){
+        return <></>
+    }
+
     return(
-        <div>
-            <h1>SearchResult</h1>
+        <SearchResultStyled>
+            <div>
+                <Filter />
+                <BookList books={books} theme={search!}/>
+            </div>
+
+            {/* <h1>SearchResult</h1>
             <h1>{search}</h1>
             {books.map(book => (
                 <h1>{book.volumeInfo.title}</h1>
-            ))}
-        </div>
+            ))} */}
+        </SearchResultStyled>
     )
 }
 
