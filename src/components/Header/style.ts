@@ -23,6 +23,11 @@ export const HeaderStyled = styled.header`
         width: 140px;
         height: 30px;
         cursor: pointer;
+
+        @media (max-width: 743px) {
+            width: 111px;
+            height:24px;
+        }
     }
 
     > .SearchInput {
@@ -51,6 +56,8 @@ export const HeaderStyled = styled.header`
                 background-color: red;
                 margin-left: 15px;
                 margin-bottom: -9px;
+                position: relative;
+                z-index: 1;
             }
 
             > svg {
@@ -95,7 +102,7 @@ export const HeaderStyled = styled.header`
 `
 
 export const InputMobile = styled.div`
-    padding: 20px;
+    padding: 20px 20px 0 20px;
 
     @media (min-width: 744px) {
         display: none;

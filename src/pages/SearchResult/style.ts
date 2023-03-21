@@ -11,7 +11,7 @@ export const SearchResultStyled = styled.div`
         display: flex;
         gap: 10%;
         overflow: hidden;
-        margin: 0 10%;
+        margin: 0 6%;
         /* @media (max-width: 744px) {
             margin: 0;
         } */
