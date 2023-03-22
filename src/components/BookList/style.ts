@@ -35,8 +35,7 @@ export const BookListStyled = styled.div`
             }
 
             > div {
-                height: 100%;
-                max-height: 185px;
+                height: 185px;
                 /* max-width: 124px; */
                 width: 100%;
                 box-shadow: 0px 8px 10px 1px rgba(5, 59, 75, 0.06);
