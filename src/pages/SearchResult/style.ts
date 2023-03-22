@@ -9,12 +9,14 @@ export const SearchResultStyled = styled.div`
 
     > div {
         display: flex;
+        justify-content: center;
         gap: 10%;
         overflow: hidden;
-        margin: 0 6%;
-        /* @media (max-width: 744px) {
-            margin: 0;
-        } */
+        margin: 0 10%;
+
+        @media (max-width: 644px) {
+            margin: 0 16px;
+        }
 
     }
 `

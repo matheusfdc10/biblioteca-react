@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const BookListStyled = styled.div`
+    max-width: 744px;
     flex: 1;
 
     > p {
@@ -10,36 +11,33 @@ export const BookListStyled = styled.div`
 
     > .container {
         margin-top: 28px;
-        display: flex;
-        flex-wrap: wrap;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(124px, 1fr));
         gap: 28px;
 
         > a {
-            max-width: 124px;
+            /* max-width: 124px; */
             width: 100%;
             text-decoration: none;
             /* cursor: pointer; */
 
-            @media (max-width: 644px) {
+            /* @media (max-width: 644px) {
                 width: 100px;
-            }
+            } */
 
             > img {
-                height: 185px;
-                max-width: 124px;
+                /* max-height: 185px; */
+                /* max-width: 124px; */
                 width: 100%;
                 box-shadow: 0px 8px 10px 1px rgba(5, 59, 75, 0.06);
                 border-radius: 6px 12px 12px;
-
-                @media (max-width: 644px) {
-                    max-width: 100px;
-                    height: calc(185px - 24px);
-                }
             }
 
-            > div { 
-                height: 185px;
-                max-width: 124px;
+            > div {
+                height: 100%;
+                max-height: 185px;
+                /* max-width: 124px; */
                 width: 100%;
                 box-shadow: 0px 8px 10px 1px rgba(5, 59, 75, 0.06);
                 border-radius: 6px 12px 12px;
@@ -48,17 +46,13 @@ export const BookListStyled = styled.div`
                 flex-direction: column;
                 justify-content: center;
                 margin-bottom: 8px;
-
-                @media (max-width: 644px) {
-                    max-width: 100px;
-                    height: calc(185px - 24px);
-                }
                 
                 > span {
                     text-align: center;
                     bottom: 0;
                     font-size: 16px;
                     font-weight: 600;
+                    color: black;
                 }
             }
 

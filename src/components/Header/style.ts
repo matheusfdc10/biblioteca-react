@@ -10,7 +10,7 @@ export const HeaderStyled = styled.header`
     padding: 0 24px;
     box-shadow: 0px 4px 5px rgba(5, 59, 75, 0.06);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 57px;
 
@@ -19,7 +19,14 @@ export const HeaderStyled = styled.header`
         border-bottom: 1px solid #F1F7FC;
     }
 
-    > img {
+    > div {
+        max-width: 1680px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 57px;
+
+        > img {
         width: 140px;
         height: 30px;
         cursor: pointer;
@@ -98,6 +105,7 @@ export const HeaderStyled = styled.header`
                 width: 24px;
             }
         }
+    }
     }
 `
 

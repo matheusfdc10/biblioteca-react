@@ -15,20 +15,22 @@ const Header = () => {
     return (
         <>
             <HeaderStyled>
-                <img src={logo} alt="logo" onClick={() => navigate('/')}/>
+                <div>
+                    <img src={logo} alt="logo" onClick={() => navigate('/')}/>
 
-                <SearchInput className="SearchInput" />
+                    <SearchInput className="SearchInput" />
 
-                <div className="box">
-                    <div>
-                        <div className="active" />
-                        <AiOutlineBell />
+                    <div className="box">
+                        <div>
+                            <div className="active" />
+                            <AiOutlineBell />
+                        </div>
+                        <img src={photo} alt="photo" />
+                        <button>
+                            Alessandra
+                            <MdKeyboardArrowDown />
+                        </button>
                     </div>
-                    <img src={photo} alt="photo" />
-                    <button>
-                        Alessandra
-                        <MdKeyboardArrowDown />
-                    </button>
                 </div>
             </HeaderStyled>
             <InputMobile>
