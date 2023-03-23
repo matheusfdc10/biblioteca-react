@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BookShelfStyled = styled.div`
     display: flex;
     justify-content: center;
-    padding-top: 36px;
+    padding-top: 40px;
     padding-bottom: 47px;
 
     @media (max-width: 744px) {
@@ -12,6 +12,7 @@ export const BookShelfStyled = styled.div`
     }
 
     > div {
+        max-width: 1163px;
         margin: 0 10%;
         @media (max-width: 743px) {
             margin: 0;
@@ -25,7 +26,7 @@ export const BookShelfStyled = styled.div`
             font-weight: 600;
             font-size: 16px;
             line-height: 100%;
-            padding-bottom: 40px;
+            padding-bottom: 30px;
             margin-left: 22px;
 
             @media (min-width: 744px) {
@@ -66,6 +67,11 @@ export const BookShelfStyled = styled.div`
                     width: 124px;
                 }
 
+                @media (max-width: 320px) {
+                    height: 85px ;
+                    width: 57px;
+                }
+
                 > img { 
                     height: 296px;
                     width: 198px;
@@ -76,6 +82,11 @@ export const BookShelfStyled = styled.div`
                     @media (max-width: 744px) {
                         height: 185px;
                         width: 124px;
+                    }
+
+                    @media (max-width: 320px) {
+                        height: 85px ;
+                        width: 57px;
                     }
                 }
 
@@ -94,6 +105,13 @@ export const BookShelfStyled = styled.div`
                         height: 185px;
                         width: 124px;
                     }
+
+                    @media (max-width: 320px) {
+                        height: 85px;
+                        width: 57px;
+                        padding-bottom: 13px;
+                    }
+
                     
                     > span {
                         text-align: center;
@@ -101,6 +119,10 @@ export const BookShelfStyled = styled.div`
                         font-size: 16px;
                         font-weight: 600;
                         color: black;
+
+                        @media (max-width: 320px) {
+                            font-size: 8px;
+                        }
                     }
                 }
             }

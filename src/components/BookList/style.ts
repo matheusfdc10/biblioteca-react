@@ -1,13 +1,21 @@
 import styled from "styled-components";
 
 export const BookListStyled = styled.div`
-    max-width: 744px;
-    flex: 1;
+    /* max-width: 744px;
+    flex: 1; */
 
-    > p {
+    /* > p {
         font-size: 16px;
         font-weight: 600;
     }
+
+    > .children {
+        margin-top: 25px;
+
+        @media (min-width: 645px) {
+            display: none;
+        }
+    } */
 
     > .container {
         margin-top: 28px;

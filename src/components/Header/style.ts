@@ -27,92 +27,92 @@ export const HeaderStyled = styled.header`
         gap: 57px;
 
         > img {
-        width: 140px;
-        height: 30px;
-        cursor: pointer;
-
-        @media (max-width: 743px) {
-            width: 111px;
-            height:24px;
-        }
-    }
-
-    > .SearchInput {
-        @media (max-width: 743px) {
-            display: none;
-        }
-    }
-
-
-    > .box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-
-        > div {
+            width: 140px;
+            height: 30px;
             cursor: pointer;
-            @media (min-width: 745px) {
+
+            @media (max-width: 743px) {
+                width: 111px;
+                height:24px;
+            }
+        }
+
+        > .SearchInput {
+            @media (max-width: 644px) {
                 display: none;
             }
-
-            > .active {
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background-color: red;
-                margin-left: 15px;
-                margin-bottom: -9px;
-                position: relative;
-                z-index: 1;
-            }
-
-            > svg {
-                width: 24px;
-                height: 24px;
-            }
         }
 
-        /* @media (max-width: 744px) {
-            flex-direction: row-reverse;
-        } */
-        
 
-        > img {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-        }
-
-        > button {
-            height: 40px;
-            font-weight: 700;
-            color: #406A76;
-            background-color: transparent;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
+        > .box {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 4px;
+            gap: 20px;
 
-            @media (max-width: 744px) {
-                display: none;
+            > div {
+                cursor: pointer;
+                @media (min-width: 745px) {
+                    display: none;
+                }
+
+                > .active {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: red;
+                    margin-left: 15px;
+                    margin-bottom: -9px;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                > svg {
+                    width: 24px;
+                    height: 24px;
+                }
             }
 
-            > svg {
-                height: 24px;
-                width: 24px;
+            /* @media (max-width: 744px) {
+                flex-direction: row-reverse;
+            } */
+            
+
+            > img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+            }
+
+            > button {
+                height: 40px;
+                font-weight: 700;
+                color: #406A76;
+                background-color: transparent;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                @media (max-width: 744px) {
+                    display: none;
+                }
+
+                > svg {
+                    height: 24px;
+                    width: 24px;
+                }
             }
         }
-    }
     }
 `
 
 export const InputMobile = styled.div`
     padding: 20px 20px 0 20px;
 
-    @media (min-width: 744px) {
+    @media (min-width: 645px) {
         display: none;
     }
 `

@@ -22,7 +22,7 @@ const BookList = ({ search, children}: BookListProps) => {
     const [books, setBooks] = useState<booksProps>([])
     const [startIndex, setStartIndex] = useState(0)
     const divInfiniteScrollRef = useRef<HTMLDivElement>(null)
-    console.log(books)
+    
     useEffect(() => {
         setBooks((old) => old = [])
         setStartIndex((index) => index = 0)
@@ -64,8 +64,6 @@ const BookList = ({ search, children}: BookListProps) => {
     
     return (
         <BookListStyled>
-            <p>Resultados para "{search}":</p>
-            {children}
             <div className="container">
                 {books.map((book,i) => (
                     <a key={i} title={book.volumeInfo.title} href={book.volumeInfo.previewLink} target="_blank">

@@ -9,42 +9,55 @@ export const FooterStyled = styled.footer`
     background-color: #FFFFFF;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 72px;
-    padding: 0 81px;
 
     @media (max-width: 743px) {
         padding: 0 20px;
     }
 
-    > span {
-        font-size: 12.8px;
-        font-weight: 500;
-        color: #B2B4B9;
-
-        @media (max-width: 743px) {
-            text-align: center;
-        }
-    }
-
     > div {
+        width: 100%;
+        max-width: 1680px;
         display: flex;
-        gap: 12px;
+        justify-content: space-around;
+        align-items: center;
+        gap: 72px;
+        padding: 0 81px;
 
-        @media (max-width: 743px) {
-            display: none;
+        @media (max-width: 320px) {
+            padding: 0 40px;
         }
 
-        > button {
-            flex-shrink: 0;
-            flex-grow: 0;
+
+        > span {
+            font-size: 12.8px;
+            font-weight: 500;
             color: #B2B4B9;
-            border: 1px solid #B2B4B9;
-            border-radius: 10px;    
-            padding: 10px 16px 10px 16px;
-            background-color: white;
-            cursor: pointer;
+
+            @media (max-width: 743px) {
+                text-align: center;
+            }
+        }
+
+        > div {
+            display: flex;
+            gap: 12px;
+
+            @media (max-width: 743px) {
+                display: none;
+            }
+
+            > button {
+                flex-shrink: 0;
+                flex-grow: 0;
+                color: #B2B4B9;
+                border: 1px solid #B2B4B9;
+                border-radius: 10px;    
+                padding: 10px 16px 10px 16px;
+                background-color: white;
+                cursor: pointer;
+            }
         }
     }
 `
