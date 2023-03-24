@@ -1,6 +1,7 @@
 import { BookListStyled } from "./style";
 import { ReactNode, useEffect, useRef, useState } from 'react'
 import axios from "axios";
+import Loading from "../Loading";
 
 type BookListProps = {
     search: string,
@@ -21,6 +22,7 @@ type booksProps = {
 const BookList = ({ search, children}: BookListProps) => {
     const [books, setBooks] = useState<booksProps>([])
     const [startIndex, setStartIndex] = useState(0)
+    const [loading, setLoading] = useState(true)
     const divInfiniteScrollRef = useRef<HTMLDivElement>(null)
     
     useEffect(() => {
@@ -39,6 +41,8 @@ const BookList = ({ search, children}: BookListProps) => {
             .then(data => {
                 if(data.items){
                     setBooks([...books, ...data.items])
+                } else {
+                    setLoading(!Loading)
                 }
             })
             .catch(() => alert(`Erro ao buscar por ${search}, tente novamente`))
@@ -82,7 +86,9 @@ const BookList = ({ search, children}: BookListProps) => {
                     </a>
                 ))}
             </div>
-            <div ref={divInfiniteScrollRef}/>
+            <div ref={divInfiniteScrollRef}>
+                {loading ? <Loading /> : null}
+            </div>
         </BookListStyled>
     )
 }
