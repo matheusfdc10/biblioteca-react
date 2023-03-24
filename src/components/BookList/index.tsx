@@ -26,6 +26,7 @@ const BookList = ({ search, children}: BookListProps) => {
     const divInfiniteScrollRef = useRef<HTMLDivElement>(null)
     
     useEffect(() => {
+        setLoading(true)
         setBooks((old) => old = [])
         setStartIndex((index) => index = 0)
 
@@ -42,7 +43,7 @@ const BookList = ({ search, children}: BookListProps) => {
                 if(data.items){
                     setBooks([...books, ...data.items])
                 } else {
-                    setLoading(!Loading)
+                    setLoading(false)
                 }
             })
             .catch(() => alert(`Erro ao buscar por ${search}, tente novamente`))
