@@ -22,6 +22,35 @@ export const SearchResultStyled = styled.div`
             }
         }
 
+        > div:first-child {
+            > button {
+                display: none;
+            }
+        }
+
+        > .on {
+            display: block !important;
+            padding: 38px 0 0  16px;
+            position: fixed;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            overflow: hidden;
+
+            > .on {
+                display: block !important;
+                position: absolute;
+                right: 27px;
+
+                font-size: 16px;
+                border: none;
+                background-color: transparent;
+            }
+        }
+
         > .container {
             flex: 1;
             max-width: 744px;

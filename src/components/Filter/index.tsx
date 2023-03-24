@@ -60,13 +60,6 @@ const Filter = () => {
                 </div>
             </div>
         </FilterStyled>
-
-        // <button
-        // className="filter-btn"
-        // style={{width: '100%', backgroundColor: '#8553F4', color: '#FFF', height: '55px', borderRadius: '10px', border: 'none', marginTop: '24px'}}
-        // >
-        // FILTRAR
-        // </button>
     )
 }
 
